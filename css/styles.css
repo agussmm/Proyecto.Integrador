@@ -54,47 +54,94 @@ nav a {
     padding: 20px;
 }
 
-.producto {
+.grandes {
     width: calc(25% - 20px);
     border: 1px solid #ddd;
     padding: 20px;
     text-align: center;
 }
 
-.producto img {
+.grandes img {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
 }
 
-.producto h3 {
+.grandes h3 {
     font-size: 18px;
     margin-bottom: 10px;
 }
 
-.productos article {
+.grandes article {
     width: calc(25% - 20px);
     box-sizing: border-box;
     margin-right: 20px;
     margin-bottom: 20px;
 }
 
-.productos {
+.grandes {
     display: flex;
     flex-wrap: wrap;
 }
 
-.productos article img {
+
+.grandes article img {
     width: 100%;
     height: auto;
 }
 
-.productos article h3 {
+.grandes article h3 {
     font-size: 14px;
     margin: 10px 0 5px 0;
 }
 
-.productos article p {
+.grandes article p {
+    font-size: 12px;
+    color: #666;
+}
+
+.mano {
+    width: calc(25% - 20px);
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.mano img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.mano h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.mano article {
+    width: calc(25% - 20px);
+    box-sizing: border-box;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.mano {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.mano article img {
+    width: 100%;
+    height: auto;
+}
+
+.mano article h3 {
+    font-size: 14px;
+    margin: 10px 0 5px 0;
+}
+
+.mano article p {
     font-size: 12px;
     color: #666;
 }
