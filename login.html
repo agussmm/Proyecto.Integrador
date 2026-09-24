@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+   <main class="auth-container">
+    <form action="index.html" method="POST" class="auth-form">
+        <h2>Iniciar sesion</h2>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+
+        <label for="password">Contraseñar:</label>
+        <input type="passsword" id="passsword" name="passsword" required placeholder="*******">
+
+        <button type="submit">Ingresar</button>
+
+        <a href="register.html" class="link-auth">No tengo cuenta</a>:
+    </form>
+   </main>
 </body>
 </html>
