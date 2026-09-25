@@ -193,7 +193,7 @@ img {
 }
 
 @media(max-width: 900px) {
-    .grandes,
+    .grandes
     .mano {
         display: flex;
         flex-wrap: wrap;
