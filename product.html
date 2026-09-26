@@ -10,23 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 <body>
-    <header>
-
-        <nav class="user-nav">
-            <ul>
-                <li> <a href="./login.html"> login </a></li>
-                <li> <a href="./register.html"> register </a></li>
-            </ul>
-            <form action="./search-results.html" method="get" class="search-form">
-                <input type="text" name="busqueda" placeholder="Buscar carteras..." value="">
-                <button type="submit">Buscar</button>
-            </form>
-        </nav>
-<a href="./index.html">
-    <img src="./gortari/logo.jpeg" alt="logo Gortari"> 
-</a>
-        <nav class="main-nav">
-            <ul>
+        <header class="cabecera">
+        <div class="contenedor"> 
+            <a href="./index.html" class="logo">
+                <img src="./img/logo.jpeg" alt="logo Gortari">
+                <span class="logo-texto">Gortari</span>
+            </a>
+        <nav>
+            <ul class="menu">
                <li> <a href="./index.html">Home</a> </li>
                 <li> <a href="./giftcard.html">Gift Card</a></li>
                 <li> <a href="./about.html">About</a></li>
@@ -34,6 +25,11 @@
                 <li> <a href="./login.html">Login</a></li>
             </ul>
         </nav>
+        <form class="buscador" action="./search-results.html" method="get">
+            <input type="text" name="busqueda" placeholder="Buscar carteras..." value="">
+            <button type="submit">Buscar</button>
+        </form>
+        </div>
     </header>
 
  <div class="contenedor cuerpo">
@@ -45,8 +41,7 @@
         <li><a href="category.html">Fragrances</a></li>
         <li><a href="category.html">Furniture</a></li>
         <li><a href="category.html">Groceries</a></li>
-        <li><a href="category.html">Home</a></li>
-        <li><a href="category.html">Decoration</a></li>
+        <li><a href="category.html">Home Decoration</a></li>
         <li><a href="category.html">Kitchen accessories</a></li>
         <li><a href="category.html">Laptops</a></li>
         <li><a href="category.html">Mens shirts</a></li>
@@ -111,7 +106,7 @@
       </section>
 
     </main>
-    
+    </div>
     <footer class="pie">
     <div class="contenedor">
       <p class="pie-marca">Gortari</p>
