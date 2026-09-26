@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,10<PASSWORD>" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
         <header class="cabecera">
@@ -25,8 +25,8 @@
                 <li> <a href="./login.html">Login</a></li>
             </ul>
         </nav>
-        <form class="buscador" action="./search-results.html" method="get" value="">
-            <input type="text" name="busqueda" placeholder="Buscar carteras..." value="">
+        <form class="buscador" action="./search-results.html" method="get">
+            <input type="text" name="busqueda" placeholder="Buscar carteras...">
             <button type="submit">Buscar</button>
         </form>
         </div>
@@ -74,10 +74,10 @@
         <label for="password2">Confirmar Contraseña</label>
         <input type="password" id="password2" name="password2" required placeholder="*******" value="" class="control">
        
-        <p class="check"> 
+        <div class="check"> 
         <input type="checkbox" id="terminos" name="terminos" required>
         <label for="terminos">Acepto los términos y condiciones</label>
-       </p>
+        </div>
         <button type="submit" class="boton-lleno">Registrarme</button>
 
         <a href="./login.html" class="link-form">Ya tengo cuenta</a>
