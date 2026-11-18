@@ -21,16 +21,17 @@ for (let i = 0; i < data.products.length; i++) {
           <h3>${data.products[i].title}</h3>
           <p class="descripcion">${data.products[i].description}</p>
           <p class="precio">$ ${data.products[i].price}</p>
-          <a href="./product.html?id=${data.products[i].id}" class="boton">ver detalle</a>
+          <a href="./product.html?id=${data.products[i].id}" 
+          class="boton">ver detalle</a>
         </article>`;
     }
     grillaUno.innerHTML = productos;
 })
-  .catch(function (error) {
-    console.log("Error: " + error);
+  .catch(function(error) {
+    console.log("Error: "+error);
   });
 
-fetch('https://dummyjson.com/products/category/tops')
+fetch('https://dummyjson.com/products/category/smartphones')
 .then(function(response) {
     return response.json();
 })

@@ -12,8 +12,8 @@ fetch(`https://dummyjson.com/products/${id}`)
 .then(function(data) {
     console.log(data);
     let tagsHtml = "";
-    for (let i = 0; i < data.tags.length; i++) {
-        tagsHtml += `<span class="tag">${data.tags[i]}</span>`;
+    for (let i = 0; i < data.tags.length && i<3; i++) {
+        tagsHtml += `<li class="tag">${data.tags[i]}</li>`;
     }
 
     let productoHtml = `
@@ -26,7 +26,7 @@ fetch(`https://dummyjson.com/products/${id}`)
     <h1>${data.title}</h1>
     <p class="precio-grande">$ ${data.price}</p>
     <p class="descripcion">${data.description}</p>
-    <p class="dato"><strong>Categoria:</strong> <a href="./category.html?category=${data.category}">${data.category}</a></p>
+    <p class="dato"><strong>Categoria:</strong> <a href="./category.html?category=${data.category}" style="text-decoration:underline;">${data.category}</a></p>
     <p class="dato"><strong>stock:</strong> ${data.stock} unidades </p>
     <ul class="tags">
     ${tagsHtml}
