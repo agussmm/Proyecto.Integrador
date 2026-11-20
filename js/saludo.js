@@ -17,4 +17,3 @@ if (emailGuardado !== null) {
     itemLogout.style.display = "none";
 
 }
-
