@@ -1,15 +1,17 @@
 let ListaCategorias=document.querySelector(".lista-categorias");
 
-fetch("https://dummyjson.com/products/category-list")
-    .then(fuction (response) {
-        return response.json ();
+fetch('https://dummyjson.com/products/category-list')
+    .then(function(response){
+        return response.json();
     })
-    .then(function (data) {
-        let categorias = "";
+    .then(function(data){
+        console.log(data);
+
         for (let i = 0; i < data.length; i++) {
-            categorias += ´<li><a href="./category.html?category=${data[i]}">${data[i]}</a></li>´;
-}
-listaCategorias.innerHTML = categorias;
+            let nombreCategoria = data[i];
+
+            listaCategorias.innerHTML = listaCategorias.innerHTML + `<li><a href="./category.html?category=${nombreCategoria}">${nombreCategoria}</a></li>`;
+        }
     })
     .catch(function (error) {
         console.log("Error: " + error);

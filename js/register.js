@@ -7,16 +7,19 @@ let errorRegistro = document.querySelector(".mensaje-register");
 formRegistro.addEventListener("submit", function(event) {
     event.preventDefault();
 
+   let password = passwordRegistro.value;
+    let cantidadCaracteres = password.length;
+
     if (emailRegistro.value == "") {
-        errorRegistro.innerText = "El mail es obligatorio";
-    } else if (passwordRegistro.value == "") {
-        errorRegistro.innerText = "La contraseña es obligatoria";
-    } else if (passwordRegistro.value.length < 6) {
-        errorRegistro.innerText = "La contraseña debe tener al menos 6 caracteres";
-    } else if (passwordRegistro.value != password2Registro.value) {
-        errorRegistro.innerText = "Las contraseñas no coinciden";
-    } else if { 
-       this.submit ();
+        mensajeRegistro.innerText = "El email es obligatorio";
+    } else if (password == "") {
+        mensajeRegistro.innerText = "La contraseña es obligatoria";
+    } else if (cantidadCaracteres < 6) {
+        mensajeRegistro.innerText = "La contraseña debe tener al menos 6 caracteres";
+    } else if (password != password2Registro.value) {
+        mensajeRegistro.innerText = "Las contraseñas no coinciden";
+    } else {
+        this.submit();
     }
-});
+})
       

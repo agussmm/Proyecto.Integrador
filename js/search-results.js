@@ -1,34 +1,39 @@
-let parametros = new URLSearchParams (location.search);
-let termino = parametros.get ("busqueda");
-let grillaResultados = document.querySelector ("#grilla-resultados");
-let sinResultados = document.querySelector("#sin-resultados");
+let queryString = location.search;
+let queryStringObj = new URLSearchParams(queryString);
+let terminoBuscado = queryStringObj.get('busqueda');
 
-document.querySelector(#termino").innerText = termino;
+let tituloBusqueda = document.querySelector(".titulo-busqueda");
+let grillaBusqueda = document.querySelector(".grilla-busqueda");
+let sinResultados = document.querySelector(".sin-resultados");
 
-    fetch("https://dummyjson.com/products/search?q=" + termino)
+tituloBusqueda.innerText = "Resultados de búsqueda para: " + terminoBuscado;
+
+    fetch("https://dummyjson.com/products/search?q=" + terminoBuscado)
     .then(function (response) {
         return response.json ();
     })
     .then (function (data) {
-        if (data.products.length == 0) {
-            sinResultados.innerText = "No hay resultados para el termino:" + termino;
+        console.log(data);
+
+        let productos = data.products;
+        let cantidadProductos = productos.length;
+
+        if (cantidadProductos == 0) {
+            sinResultados.innerText = "No hay resultados para el término: " + terminoBuscado;
         } else {
-            let productos 0 "";
-            for (let i = 0; i< data.products.length; i++) {
-                let producto = data.products [i];
-                productos += ´<article>
-                <div class="foto">
-                    <img src="${producto.thumbnail}" alt="$producto.title}">
+            for (let i = 0; i< productos.length; i++) {
+                let producto = productos [i];
+                grillaBusqueda.innerHTML = grillaBusqueda.innerHTML + `<article>                <div class="foto">
+                    <img src="${producto.thumbnail}" alt="${producto.title}">
                 </div>
                 <h3>${producto.title}</h3>
                 <p class="descripcion">${producto.description}</p>
                 <p class="precio">$ ${producto.price}</p>
-                <a href="./product.html?id=${producto.id}" class="boton">Ver detalles</a >
-            </article>´;
+                <a href="./product.html?id=${producto.id}" class="boton">ver detalle</a>
+            </article>`;
             }
-            grillaResultados.innerHTML = productos;
         }
     })
     .catch (function (error) {
-        console.log("Error: " + error);
+        console.log('El error es: ' + error);
     });
