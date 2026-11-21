@@ -18,5 +18,4 @@ linkLogout.addEventListener('click', function(event) {
     liLogout.style.display = "none";
     liLogin.style.display = "block";
     liRegister.style.display = "block";
-}
-)
+})
