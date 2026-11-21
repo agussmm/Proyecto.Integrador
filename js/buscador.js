@@ -1,6 +1,6 @@
 let formBuscador = document.querySelector(".buscador");
-let campoBusqueda = document.querySelector(".buscador input");
-let errorBusqueda = document.querySelector(".error-b|");
+let campoBusqueda = document.querySelector(".campoBuscar");
+let mensajeBusqueda = document.querySelector(".mensaje-busqueda");
 
 formBuscador.addEventListener('submit', function(event) {
     event.preventDefault();
